@@ -12,6 +12,7 @@ pipeline {
         stage('docker push') {
             steps {
                 script {
+					bat "docker login -u elimasrojas -p Colombia0210"
                     bat "docker push elimasrojas/homer_page:1.0.0-${BUILD_ID}"
                 }
             }
